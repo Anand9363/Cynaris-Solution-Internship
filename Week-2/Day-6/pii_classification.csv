@@ -1,0 +1,8 @@
+Column,Classification,Protection Strategy
+order_id,Review required,Check context before sharing
+order_item_id,Review required,Check context before sharing
+product_id,Review required,Check context before sharing
+seller_id,Review required,Check context before sharing
+shipping_limit_date,Review required,Check context before sharing
+price,Review required,Check context before sharing
+freight_value,Review required,Check context before sharing

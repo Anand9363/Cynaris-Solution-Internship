@@ -1,0 +1,224 @@
+
+<html>
+<head>
+<title>W2D6 Data Quality Report</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background-color: #eeeeee;
+}
+</style>
+</head>
+
+<body>
+
+<h1>W2D6 - Data Governance Report</h1>
+
+<h2>Dataset Overview</h2>
+
+<p>Rows: 112650</p>
+<p>Columns: 7</p>
+
+<h2>DAMA Data Quality Scorecard</h2>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Dimension</th>
+      <th>Score (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Completeness</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Accuracy</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Consistency</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Timeliness</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Uniqueness</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <td>Validity</td>
+      <td>100.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Original Data Validation</h2>
+
+<p>GX Success: False</p>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Expectation</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>expect_table_row_count_to_be_between</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>expect_table_column_count_to_be_between</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>expect_column_values_to_not_be_null</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>expect_column_values_to_be_unique</td>
+      <td>FAIL</td>
+    </tr>
+    <tr>
+      <td>expect_column_values_to_be_between</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>expect_column_values_to_not_be_null</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>expect_column_values_to_not_be_null</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>expect_column_values_to_not_be_null</td>
+      <td>PASS</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Corrupted Data Validation</h2>
+
+<p>GX Success: False</p>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Expectation</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>expect_table_row_count_to_be_between</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>expect_table_column_count_to_be_between</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>expect_column_values_to_not_be_null</td>
+      <td>FAIL</td>
+    </tr>
+    <tr>
+      <td>expect_column_values_to_be_unique</td>
+      <td>FAIL</td>
+    </tr>
+    <tr>
+      <td>expect_column_values_to_be_between</td>
+      <td>FAIL</td>
+    </tr>
+    <tr>
+      <td>expect_column_values_to_not_be_null</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>expect_column_values_to_not_be_null</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>expect_column_values_to_not_be_null</td>
+      <td>PASS</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Error Detection</h2>
+
+<p>Missing Value Detected: True</p>
+<p>Duplicate ID Detected: True</p>
+<p>Negative Value Detected: True</p>
+
+<h2>PII Classification</h2>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Column</th>
+      <th>Classification</th>
+      <th>Protection Strategy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>order_id</td>
+      <td>Review required</td>
+      <td>Check context before sharing</td>
+    </tr>
+    <tr>
+      <td>order_item_id</td>
+      <td>Review required</td>
+      <td>Check context before sharing</td>
+    </tr>
+    <tr>
+      <td>product_id</td>
+      <td>Review required</td>
+      <td>Check context before sharing</td>
+    </tr>
+    <tr>
+      <td>seller_id</td>
+      <td>Review required</td>
+      <td>Check context before sharing</td>
+    </tr>
+    <tr>
+      <td>shipping_limit_date</td>
+      <td>Review required</td>
+      <td>Check context before sharing</td>
+    </tr>
+    <tr>
+      <td>price</td>
+      <td>Review required</td>
+      <td>Check context before sharing</td>
+    </tr>
+    <tr>
+      <td>freight_value</td>
+      <td>Review required</td>
+      <td>Check context before sharing</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

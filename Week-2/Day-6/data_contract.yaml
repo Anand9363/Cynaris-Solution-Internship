@@ -1,0 +1,53 @@
+dataContractSpecification: 0.9.3
+id: indian-business-data-v1
+info:
+  title: Indian Business Dataset
+  owner: Data Analyst
+  producer: Data Analyst
+  consumer: BI Dashboard
+  description: Data quality and governance contract
+quality:
+  completeness: Required fields must not be null
+  uniqueness: Identifier fields must be unique
+  validity: Values must follow defined formats
+  freshness: Refresh schedule must be agreed
+models:
+  business:
+    fields:
+      order_id:
+        type: str
+        required: true
+        classification: Review required
+      order_item_id:
+        type: int64
+        required: true
+        classification: Review required
+      product_id:
+        type: str
+        required: true
+        classification: Review required
+      seller_id:
+        type: str
+        required: true
+        classification: Review required
+      shipping_limit_date:
+        type: str
+        required: true
+        classification: Review required
+      price:
+        type: float64
+        required: true
+        classification: Review required
+      freight_value:
+        type: float64
+        required: true
+        classification: Review required
+security:
+  pii_handling:
+  - Identify sensitive columns
+  - Mask personal information
+  - Restrict access to authorised users
+  - Use tokenisation where appropriate
+sla:
+  freshness: To be agreed with BI dashboard consumer
+  quality: Critical validation failures must be resolved
